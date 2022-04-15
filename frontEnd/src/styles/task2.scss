@@ -1,0 +1,41 @@
+@import "./variables";
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: $black;
+
+  .title {
+    font-size: 2rem;
+    color: $brown1;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin-top: 2rem;
+    margin: auto;
+    padding: 1rem;
+    width: 90%;
+    height: 100%;
+
+    .gridItem {
+      width: 90%;
+      background: $brown2;
+
+      .itemTitle {
+        color: $black;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .itemImg {
+        width: 100%;
+      }
+    }
+  }
+}

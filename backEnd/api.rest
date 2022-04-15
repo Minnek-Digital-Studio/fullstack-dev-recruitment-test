@@ -1,0 +1,36 @@
+@localhost = http://localhost:4000/api
+
+###
+GET {{localhost}}/user/6257c800594112fb61bcb503
+
+###
+GET {{localhost}}/user 
+
+###
+POST {{localhost}}/user
+Content-Type: application/json
+
+{
+  "name": "jose nuñw",
+  "password": "sdfdssdf"
+}
+
+### 
+GET {{localhost}}/product
+
+###
+POST {{localhost}}/product
+Content-Type: application/json
+
+{
+  "Name": "Product 5",
+  "Price": "200.00",
+  "Description": "Product 2 description",
+  "Imagen": "http://www.example.com/image.jpg"
+}
+
+###
+DELETE {{localhost}}/product
+
+
+
