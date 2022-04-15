@@ -1,0 +1,14 @@
+$black: #3a3845;
+$brown1: #f7ccac;
+$brown2: #c69b7b;
+$brown3: #826f66;
+$blue: #0fb0e4;
+
+@mixin solid {
+  outline: solid 1px black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}

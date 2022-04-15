@@ -1,0 +1,19 @@
+@import "./variables";
+
+.navBar {
+  width: 100%;
+  height: 50px;
+  background: $brown1;
+
+  .optionGroup {
+    display: flex;
+
+    .buttons {
+      list-style: none;
+      margin: 10px;
+      font-weight: bold;
+      color: $black;
+      cursor: pointer;
+    }
+  }
+}
