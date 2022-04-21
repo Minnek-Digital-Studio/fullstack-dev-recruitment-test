@@ -5,19 +5,19 @@ export default function Task1() {
   const array = [
     "n",
     2,
-    "&",
+    "$",
     "a",
     "l",
     9,
-    "$",
     "q",
     47,
     "i",
+    "&",
     "a",
     "j",
+    "%",
     "b",
     "z",
-    "%",
     8,
   ];
 
@@ -29,9 +29,11 @@ export default function Task1() {
     array[index2] = position;
   };
 
-  order(13, 2);
-  order(9, 6);
-  order(14, 1);
+  arrayReverse.find((element, index) => {
+    if (element === "&") order(index, 2);
+    if (element === "$") order(index, 6);
+    if (element === "%") order(index, 14);
+  });
 
   return (
     <>

@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar";
 
-export default function LoginWithRegister({ verification, setVerification }) {
+export default function LoginWithRegister({ setVerification }) {
   const [error, setError] = useState();
   const navigate = useNavigate();
 

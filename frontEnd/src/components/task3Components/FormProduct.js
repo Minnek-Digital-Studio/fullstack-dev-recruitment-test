@@ -12,9 +12,9 @@ export default function FormProduct() {
       <NavBar />
       <div className="formContainer">
         <a
+          onClick={() => localStorage.setItem("verification", false)}
           href="/task3"
           className="btnVolver"
-          onClick={() => localStorage.setItem("verification", false)}
         >
           cerrar sesion
         </a>

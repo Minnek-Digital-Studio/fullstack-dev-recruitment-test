@@ -10,7 +10,7 @@ export default function Home({ verification }) {
     <ProductProvider>
       {verification !== "false" ? (
         <>
-          <FormProduct />
+          <FormProduct verification={verification} />
           <SliderProduct />
         </>
       ) : (

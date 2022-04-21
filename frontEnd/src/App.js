@@ -2,7 +2,7 @@ import Task1 from "./pages/Task1.js";
 import Task2 from "./pages/Task2.js";
 import Login from "./components/pageTask3/Login.js";
 import Home from "./components/pageTask3/Home.js";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Nav from "./pages/Nav.js";
 import { useState } from "react";
 
@@ -21,10 +21,11 @@ function App() {
             exact
             path="/task3"
             element={
-              <Login
-                verification={verification}
-                setVerification={setVerification}
-              />
+              // verification === false ? (
+              <Login setVerification={setVerification} />
+              // ) : (
+              //   <Navigate to="/task3/home" />
+              // )
             }
           />
           <Route
