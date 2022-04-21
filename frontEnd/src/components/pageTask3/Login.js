@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar";
 
-export default function LoginWithRegister({ setVerification }) {
+export default function LoginWithRegister({ verification, setVerification }) {
   const [error, setError] = useState();
   const navigate = useNavigate();
 
@@ -41,8 +41,8 @@ export default function LoginWithRegister({ setVerification }) {
                 values.password === USER.password
               ) {
                 setError("");
-                setVerification(true);
-                navigate("/task3/home");
+                setVerification(localStorage.setItem("verification", true));
+                navigate("/task3/home", { replace: true });
               } else {
                 setError("Usuario o contraseña incorrectos");
               }

@@ -14,7 +14,11 @@ export default function DogComponent() {
           {dogGroup.map((dog, index) => {
             return (
               <div className="gridItem" key={index}>
-                <img src={dog.img} alt={dog.name} className="itemImg" />
+                <img
+                  src="https://picsum.photos/200"
+                  alt={dog.name}
+                  className="itemImg"
+                />
                 <h3 className="itemTitle">{dog.name}</h3>
               </div>
             );

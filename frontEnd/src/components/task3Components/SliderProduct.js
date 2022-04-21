@@ -10,8 +10,9 @@ export default function SliderProduct() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: product.length > 3 ? 3 : product.length,
     slidesToScroll: 1,
+    className: "slider",
   };
 
   return (
@@ -19,7 +20,7 @@ export default function SliderProduct() {
       {product.length === 0 ? (
         <h1 className="nada">si no hay productos</h1>
       ) : (
-        <Slider {...settingsSlider} className="slider">
+        <Slider {...settingsSlider}>
           {product.map((item) => {
             return (
               <div className="sliderItem" key={item}>

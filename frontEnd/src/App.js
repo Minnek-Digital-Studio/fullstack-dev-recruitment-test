@@ -7,7 +7,9 @@ import Nav from "./pages/Nav.js";
 import { useState } from "react";
 
 function App() {
-  const [verification, setVerification] = useState(false);
+  const [verification, setVerification] = useState(
+    localStorage.getItem("verification")
+  );
 
   return (
     <>
@@ -18,7 +20,12 @@ function App() {
           <Route
             exact
             path="/task3"
-            element={<Login setVerification={setVerification} />}
+            element={
+              <Login
+                verification={verification}
+                setVerification={setVerification}
+              />
+            }
           />
           <Route
             exact

@@ -11,6 +11,14 @@ export default function FormProduct() {
     <>
       <NavBar />
       <div className="formContainer">
+        <a
+          href="/task3"
+          className="btnVolver"
+          onClick={() => localStorage.setItem("verification", false)}
+        >
+          cerrar sesion
+        </a>
+
         <h1 className="title">Create Product</h1>
 
         <Formik
